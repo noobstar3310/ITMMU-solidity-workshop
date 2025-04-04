@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Fund</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 class="glitch" data-text="FUND ME">FUND ME</h1>
+      <div class="pixel-divider"></div>
+    </header>
+    
+    <main>
+      <div class="wallet-section">
+        <button id="connectWallet" class="pixel-button">Connect Wallet</button>
+        <div id="walletInfo" class="wallet-info hidden">
+          <p>Connected: <span id="walletAddress">Not connected</span></p>
+          <p>Balance: <span id="walletBalance">0</span> ETH</p>
+        </div>
+      </div>
+      
+      <div class="contract-section">
+        <div class="contract-info">
+          <p>Contract Balance: <span id="contractBalance">0</span> ETH</p>
+          <p>Your Funded Amount: <span id="userFunded">0</span> ETH</p>
+        </div>
+        
+        <div class="action-section">
+          <div class="fund-section">
+            <h2>FUND CONTRACT</h2>
+            <div class="input-group">
+              <input type="number" id="fundAmount" min="0" step="0.01" placeholder="ETH Amount">
+              <button id="fundButton" class="pixel-button">FUND</button>
+            </div>
+          </div>
+          
+          <div class="withdraw-section">
+            <h2>WITHDRAW FUNDS</h2>
+            <div class="input-group">
+                <button id="withdrawButton" class="pixel-button">WITHDRAW</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="notification" class="notification hidden"></div>
+    </main>
+    
+    <footer>
+      <div class="pixel-divider"></div>
+      <p>© 2025 PIXEL FUND • A WEB3 EXPERIMENT</p>
+    </footer>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.8.2/dist/web3.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
