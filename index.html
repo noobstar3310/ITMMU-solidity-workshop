@@ -24,8 +24,16 @@
       
       <div class="contract-section">
         <div class="contract-info">
-          <p>Contract Balance: <span id="contractBalance">0</span> ETH</p>
-          <p>Your Funded Amount: <span id="userFunded">0</span> ETH</p>
+          <div class="info-card">
+            <h3>Contract Balance</h3>
+            <p><span id="contractBalance">0</span> ETH</p>
+          </div>
+          
+          <div class="info-card">
+            <h3>Your Funded Amount</h3>
+            <p><span id="userFunded">0</span> ETH</p>
+            <p class="usd-value">$<span id="userFundedUSD">0</span> USD</p>
+          </div>
         </div>
         
         <div class="action-section">
@@ -35,12 +43,13 @@
               <input type="number" id="fundAmount" min="0" step="0.01" placeholder="ETH Amount">
               <button id="fundButton" class="pixel-button">FUND</button>
             </div>
+            <p class="min-amount">Minimum: 1 USD</p>
           </div>
           
           <div class="withdraw-section">
-            <h2>WITHDRAW FUNDS</h2>
+            <h2>WITHDRAW ALL FUNDS (OWNER ONLY)</h2>
             <div class="input-group">
-                <button id="withdrawButton" class="pixel-button">WITHDRAW</button>
+              <button id="withdrawButton" class="pixel-button" style="display: none;">WITHDRAW ALL</button>
             </div>
           </div>
         </div>
